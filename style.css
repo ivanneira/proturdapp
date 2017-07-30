@@ -5,12 +5,12 @@ body {
 }
 
 input {
-    margin: 0px !important;
-    color: #999;
+
+    color: #aaa !important;
     display: block;
-    border-radius: 99px !important;
+    border-radius: 0px 20px 20px 0px!important;
     border: 3px solid #00FFF7;
-    background-color: #222;"
+    background-color: #222 !important;
 
 }
 
@@ -19,8 +19,7 @@ h2 {
 }
 
 p {
-    margin : 0px;
-    margin-top: 10px;
+
     color: white;
 }
 
@@ -29,4 +28,11 @@ button {
     border-radius: 99px !important;
     border: 0px !important;
 
+}
+
+.input-group-addon {
+
+    color: #779 !important;
+    background-color: #112 !important;
+    border-radius: 20px 0px 0px 20px !important;
 }
