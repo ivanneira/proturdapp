@@ -3,17 +3,83 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+
+    <!--jQuery-->
+    <script src="js/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+
+    <!--Bootstrap-->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--Bootstrap-->
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+    <h2 id="titulo"></h2>
 
+    <div class="container">
+
+    <!--contenido dinámico-->
+
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <button type="button" id="enviar" class="bnt btn-success">Guardar Registro</button>
+      </div>
+
+    </div>
+
+  </body>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
     // You can also require other files to run in this process
-    require('./renderer.js')
+    require('./renderer.js');
+
+    setConfiguration(loadConfiguration());
+
+    function setConfiguration(data){
+
+      $("#titulo").text("Ingreso de Datos para " + data.configuracion.institucion);
+
+      //set inputs
+
+      for(var campo in data.configuracion.campos){
+
+        $(".container").append(
+                "<div class='row'>"+
+                "<p>"+ data.configuracion.campos[campo].titulo+"</p>"+
+                "<input type='text' class='input-lg' id='inp"+data.configuracion.campos[campo].id+"' placeholder='"+data.configuracion.campos[campo].id+"'/>"+
+                "</div>"
+        );
+      }
+
+      //disabledConditions(data.configuracion);
+
+    }
+
+
+    function loadConfiguration(){
+
+      var conf = require('./loadConfig.js');
+
+      return conf;
+    }
+
+    $("#enviar").click(function(){
+              saveCVS();
+    });
+
+    function saveCVS(){
+
+      $(':input'').each(
+              function(index){
+                var input = $(this);
+                alert('Type: ' + input.attr('type') + 'Name: ' + input.attr('name') + 'Value: ' + input.val());
+              }
+      )
+    }
+
   </script>
 </html>

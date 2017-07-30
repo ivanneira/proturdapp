@@ -1,0 +1,15 @@
+{
+	"institucion": "HMQ",
+	"campos": [
+		{	"id": "Nombre",
+			"titulo": "Ingrese Nombre"
+		},
+		{	"id":"Apellido",
+			"titulo": "Ingrese Apellido"
+		}
+	],
+	"habilitadoSi": [
+		"Nombre"
+	]
+	
+}
