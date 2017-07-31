@@ -4,55 +4,263 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
 
-    <!--jQuery-->
-    <script src="js/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    <!--jQuery js-->
+    <script src="node_modules/jquery/dist/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
 
-    <!--Bootstrap-->
+    <!--Select 2 js-->
+    <script type="text/javascript" src="node_modules/select2/dist/js/select2.full.min.js"></script>
+    <script type="text/javascript" src="node_modules/select2/dist/js/i18n/es.js"></script>
+
+    <!--Select 2 css-->
+    <link href="node_modules/select2/dist/css/select2.min.css" rel="stylesheet">
+
+    <!--Bootstrap css-->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!--Bootstrap-->
-    <link href="style.css" rel="stylesheet">
+    <!--Datepicker css-->
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+    <!--Estilos css-->
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h2 id="titulo">Sistema de registro PROTUR</h2>
+    <h3 id="titulo">Sistema de registro PROTUR</h3>
 
     <div class="container">
 
-      <div class="input-group">
-        <span class="input-group-addon" id="basic-addon2">Nombre y apellido</span>
-        <input type="text" class="form-control"  aria-describedby="basic-addon2">
 
-        <span class="input-group-addon" id="basic-addon2">Fecha de Nacimiento</span>
-        <input type="text" class="form-control"  aria-describedby="basic-addon2">
+        <div class="row">
 
-        <span class="input-group-addon" id="basic-addon2">DNI</span>
-        <input type="text" class="form-control"  aria-describedby="basic-addon2">
+          <label for="sepCentroDeSalud">Datos del centro de salud</label>
+          <div class="separador row" id="sepCentroDeSalud">
 
-        <span class="input-group-addon" id="basic-addon2">Sexo</span>
-        <input type="text" class="form-control"  aria-describedby="basic-addon2">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+              <div class="form-group">
+
+                <label for="selCS">Centro de Salud:</label>
+                <select class="form-control picker" id="selCS">
+                  <option>Hospital Marcial Quiroga</option>
+                  <option>Hospital Guillermo Rawson</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+              <div class="form-group">
+
+                <label for="selPT">PROTUR que carga:</label>
+                <select class="form-control picker" id="selPT">
+                  <option>Gimena Chimino</option>
+                  <option>Ella en tanga</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+              <label for="dateCarga">Fecha de carga:</label>
+              <input type="text" id="dateCarga" class="form-control">
+
+            </div>
+
+          </div>
+        </div>
+
+
+      <div class="row">
+
+        <label for="sepPaciente">Datos del paciente</label>
+        <div class="separador row" id="sepPaciente">
+
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
+              <label for="inpPNombre">Apellido y nombre:</label>
+              <input id="inpPNombre" type="text" class="form-control">
+            </div>
+
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <div class="form-group">
+
+                <label for="selPSexo">Sexo:</label>
+                <select class="form-control picker" id="selPSexo">
+                  <option>Femenino</option>
+                  <option>Masculino</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <label for="dateCarga">Fecha de nacimiento:</label>
+              <input type="text" id="datePNacimiento" class="form-control">
+            </div>
+
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <label for="Edad">Edad:</label>
+              <input type="text" disabled="disabled" id="Edad" class="form-control">
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <label for="inpPDNI">DNI:</label>
+              <input id="inpPDNI" type="text" class="form-control">
+            </div>
+
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <div class="form-group">
+
+                <label for="selCS">Pueblos originarios:</label>
+                <select class="form-control picker" id="selCS">
+                  <option>No</option>
+                  <option>Diaguita</option>
+                  <option>Huarpe</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <label for="inpPOS">Obra social:</label>
+              <input id="inpPOS" type="text" class="form-control">
+            </div>
+
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+              <label for="inpPTel">Teléfono:</label>
+              <input id="inpPTel" type="text" class="form-control">
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+              <label for="select2Departamento">Departamento:</label></br>
+              <select id="select2Departamento" class="select2input">
+                <option value="">25 de Mayo</option>
+                <option value="">9 de Julio</option>
+                <option value="">Albardón</option>
+                <option value="">Angaco</option>
+                <option value="">Calingasta</option>
+                <option value="">Capital</option>
+                <option value="">Caucete</option>
+                <option value="">Chimbas</option>
+                <option value="">Iglesia</option>
+                <option value="">Jachal</option>
+                <option value="">Pocito</option>
+                <option value="">Rawson</option>
+                <option value="">Rivadavia</option>
+                <option value="">San Martín</option>
+                <option value="">Santa Lucía</option>
+                <option value="">Sarmiento</option>
+                <option value="">Ullum</option>
+                <option value="">Valle Fértil</option>
+                <option value="">Zonda</option>
+
+              </select>
+
+            </div>
+
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+              <label for="inpPDom">Domicilio:</label>
+              <input id="inpPDom" type="text" class="form-control">
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <label for="sepTurno">Datos del turno</label>
+        <div class="separador row" id="sepTurno">
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quidem rem sit? Accusantium atque consequatur distinctio ipsum iusto minus vero, voluptatem! Consequuntur culpa dicta eaque earum harum quaerat reiciendis voluptates?</p>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <label for="sepFinalizar">Finalizar carga</label>
+        <div class="separador row" id="sepFinalizar">
+
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <button type="button" id="enviar" class="bnt btn-success">Guardar Registro</button>
+          </div>
+
+        </div>
+
       </div>
 
 
-
-    <div class="row">
-
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <button type="button" id="enviar" class="bnt btn-success">Guardar Registro</button>
-      </div>
-
     </div>
 
-    </div>
+
 
   </body>
+
+  <!--Bootstrap js-->
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <!--Datepicker js-->
+  <script src="js/bootstrap-datepicker.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+  <script src="js/bootstrap-datepicker.es.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+
+  <!--scripts de controles fuera del DOM-->
   <script>
     // You can also require other files to run in this process
     require('./renderer.js');
 
+  </script>
+
+  <!--scripts de vista-->
+  <script>
+
+    //datepicker fecha de carga
+    $('#dateCarga').datepicker({
+      title: "Fecha de carga",
+      format: "dd/mm/yyyy",
+      maxViewMode: 1,
+      todayBtn: "linked",
+      language: "es",
+      orientation: "bottom right",
+      daysOfWeekHighlighted: "1,2,3,4,5",
+      autoclose: true,
+      todayHighlight: true
+
+    });
+
+    //datepicker fecha de nacimiento
+    $('#datePNacimiento').datepicker({
+      title: "Fecha de carga",
+      format: "dd/mm/yyyy",
+      startView: 3,
+      maxViewMode: 3,
+      todayBtn: "linked",
+      language: "es",
+      orientation: "bottom right",
+      daysOfWeekHighlighted: "1,2,3,4,5",
+      autoclose: true,
+      todayHighlight: true,
+      defaultViewDate: { year: 1970, month: 01, day: 01}
+    });
+
+    //selec2 departamento
+    $(document).ready(function() {
+      $("#select2Departamento").select2();
+    });
 
   </script>
 </html>

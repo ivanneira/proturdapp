@@ -12,7 +12,9 @@
     "electron": "~1.6.2"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
-    "load-json-file": "^2.0.0"
+    "load-json-file": "^2.0.0",
+    "select2": "^4.0.3"
   }
 }
