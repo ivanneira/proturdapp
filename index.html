@@ -287,19 +287,23 @@
               <label for="radTurno">Tipo de turno:</label>
               <form id="radTurno">
                 <div class="radio">
-                  <label><input type="radio" name="optradio">Derivado</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="partDerivacion" id="optDerivado">Derivado</label>
 
-                  <label><input type="radio" name="optradio">Interconsulta</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="partInterconsulta" id="optInterconsulta">Interconsulta</label>
 
-                  <label><input type="radio" name="optradio">D.Espontánea</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="partEspontanea" id="optEspontanea">D.Espontánea</label>
 
-                  <label><input type="radio" name="optradio">P.Tránsito</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="partTransito" id="optTransito">P.Tránsito</label>
                 </div>
               </form>
-
             </div>
 
         </div>
+
+          <div id="contTurno">
+
+
+          </div>
 
       </div>
 
@@ -372,15 +376,29 @@
       defaultViewDate: { year: 1980, month: 01, day: 01}
     });
 
-    //selec2 departamento
+    //select2 departamento
     $(document).ready(function() {
       $("#select2Departamento").select2();
+      $("#select2Especialidad").select2();
+
+
+
+      $('input[type=radio][name=optradio]').change(function() {
+        $.get(this.value+".html", function(data){
+          $("#contTurno").html(data);
+        });
+
+      });
+
+
+
     });
 
-    //selec2 departamento
-    $(document).ready(function() {
-      $("#select2Especialidad").select2();
-    });
+
+  </script>
+
+  <script>
+
 
   </script>
 </html>
