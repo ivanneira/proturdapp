@@ -65,4 +65,10 @@ button {
 .select2input {
     display: inline !important;
     width: 250px;
+
+}
+
+.select2container {
+    color: #eee !important;
+    background-color: #112 !important;
 }
