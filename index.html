@@ -24,7 +24,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h3 id="titulo">Sistema de registro PROTUR</h3>
+    <h4 id="titulo">Sistema de registro PROTUR</h4>
 
     <div class="container">
 
@@ -54,7 +54,7 @@
                 <label for="selPT">PROTUR que carga:</label>
                 <select class="form-control picker" id="selPT">
                   <option>Gimena Chimino</option>
-                  <option>Ella en tanga</option>
+                  <option>Ella normal</option>
                 </select>
               </div>
 
@@ -80,7 +80,7 @@
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 
               <label for="inpPNombre">Apellido y nombre:</label>
-              <input id="inpPNombre" type="text" class="form-control">
+              <input id="inpPNombre" type="text"  class="form-control">
             </div>
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
@@ -90,6 +90,7 @@
                 <select class="form-control picker" id="selPSexo">
                   <option>Femenino</option>
                   <option>Masculino</option>
+                  <option>No especifica</option>
                 </select>
               </div>
             </div>
@@ -109,14 +110,14 @@
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
               <label for="inpPDNI">DNI:</label>
-              <input id="inpPDNI" type="text" class="form-control">
+              <input id="inpPDNI" type="number" class="form-control">
             </div>
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
               <div class="form-group">
 
-                <label for="selCS">Pueblos originarios:</label>
-                <select class="form-control picker" id="selCS">
+                <label for="selPO">Pueblos originarios:</label>
+                <select class="form-control picker" id="selPO">
                   <option>No</option>
                   <option>Diaguita</option>
                   <option>Huarpe</option>
@@ -126,13 +127,375 @@
 
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-              <label for="inpPOS">Obra social:</label>
-              <input id="inpPOS" type="text" class="form-control">
+
+              <label for="select2OS">Obra social:</label></br>
+              <select id="select2OS" class="select2input">
+                <option value="">OTRO</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA GRAFICA DE LA PROVINCIA DE CORDOBA</option>
+                <option value="">OSPA	OBRA SOCIAL PORTUARIOS ARGENTINOS DE MAR DEL </option>
+                <option value="">OSPOCE	OBRA SOCIAL DEL PERSONAL DEL ORGANISMO DE CONTROL EXTERNO</option>
+                <option value="">OSPESCA	OBRA SOCIAL DE CAPITANES, PILOTOS Y PATRONES DE PESCA</option>
+                <option value="">OSALARA	OBRA SOCIAL DE AGENTES DE LOTERIAS Y AFINES DE LA REPUBLICA  ARGENTINA</option>
+                <option value="">MUTUAL DEL PERSONAL DEL AGUA Y LA ENERGIA  DE MENDOZA</option>
+                <option value="">OSSEG	OBRA SOCIAL DE LA ACTIVIDAD DE SEGUROS, REASEGUROS, CAPITALIZACION Y AHORRO Y PRESTAMO PARA LA VIVIENDA</option>
+                <option value="">OSPLAD	OBRA SOCIAL PARA LA ACTIVIDAD DOCENTE</option>
+                <option value="">OSME	OBRA SOCIAL PARA EL PERSONAL DEL MINISTERIO DE ECONOMIA Y DE OBRAS Y SERVICIOS PUBLICOS</option>
+                <option value="">OSFE	OBRA SOCIAL FERROVIARIA</option>
+                <option value="">OSSACRA	OBRA SOCIAL DE LA ASOCIACION CIVIL PROSINDICATO DE AMAS DE CASA DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OBRA SOCIAL DEL SINDICATO UNIDO DE TRABAJADORES DE LA INDUSTRIA DE AGUAS GASEOSAS DE LA PROVINCIA DE SANTA FE</option>
+                <option value="">OSJERA	OBRA SOCIAL DEL PERSONAL JERARQUICO DE LA REPUBLICA ARGENTINA PARA EL PERSONAL JERARQUICO DE LA INDUSTRIA GRAFICA Y EL PERSONAL JERARQUICO DEL AGUA Y LA ENERGIA</option>
+                <option value="">OSLERA	OBRA SOCIAL DE LOS  LEGISLADORES DE LA REPUBLICA ARGENTINA</option>
+                <option value="">FEDECAMARAS	OBRA SOCIAL DE LA FEDERACION DE CAMARAS Y CENTROS COMERCIALES ZONALES DE LA REPUBLICA ARGENTINA (FEDECAMARAS)</option>
+                <option value="">OSPROTURA	OBRA SOCIAL PROFESIONALES DEL TURF DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OBRA SOCIAL DE EMPLEADOS Y PERSONAL JERARQUICO  DE LA ACTIVIDAD DEL  NEUMATICO ARGENTINO DE NEUMATICOS GOOD YEAR SRL</option>
+                <option value="">OBRA SOCIAL PARA EL  PERSONAL DE EMPRESAS DE  LIMPIEZA, SERVICIOS Y MAESTRANZA DE MENDOZA</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL JERARQUICO DEL TRANSPORTE AUTOMOTOR DE PASAJEROS DE CORDOBA Y AFINES</option>
+                <option value="">OSMISS	OBRA SOCIAL DE MINISTROS, SECRETARIOS Y SUBSECRETARIOS</option>
+                <option value="">O.S.T.C.A.R.A.	OBRA SOCIAL DE LOS TRABAJADORES DE LA CARNE Y AFINES DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSTAMMA	OBRA SOCIAL DE LOS TRABAJADORES ASOCIADOS A LA ASOCIACION MUTUAL MERCANTI</option>L ARGENTINA
+                <option value="">O.S.E.A.R.B.A.	OBRA SOCIAL DE LA CAMARA DE EMPRESARIOS DE AGENCIAS DE REMISES DE LA PROVINCIA DE BUENOS AIRES</option>
+                <option value="">OSAMMVC	OBRA SOCIAL ASOCIACION MUTUAL METALURGICA VILLA CONSTITUCION</option>
+                <option value="">O.S.PERS.A.A.M.S.	OBRA SOCIAL DEL PERSONAL ASOCIADO A ASOCIACION MUTUAL SANCOR</option>
+                <option value="">OSPAÑA	OBRA SOCIAL DE LOS INMIGRANTES ESPAÑOLES Y SUS DESCENDIENTES RE</option>SIDENTES EN LA REPUBLICA ARGENTINA
+                <option value="">OBRA SOCIAL DE TRABAJADORES SOCIOS DE LA ASOCIACION MUTUAL DEL PERSONAL JERARQUICO DE BANCOS OFICIALES </option>NACIONALES-JERARQUICOS SALUD-
+                <option value="">OSTVENDRA	OBRA SOCIAL DE TRABAJADORES VENDEDORES DE DIARIOS REVISTAS Y AFINES</option>
+                <option value="">O.S.A.M.O.C	OBRA SOCIAL ASOCIACION  MUTUAL DE LOS OBREROS CATOLICOS PADRE FEDERICO GROTE</option>
+                <option value="">O.S.TAX.B.A	OBRA SOCIAL DE CONDUCTORES TITULARES DE TAXIS DE LA CIUDAD AUTONO</option>MA DE BUENOS AIRES
+                <option value="">OBRA SOCIAL PROGRAMAS MEDICOS SOCIEDAD ARGENTINA DE CONSULTORIA MUTUAL</option>
+                <option value="">OBRA SOCIAL DE YACIMIENTOS CARBONIFEROS</option>
+                <option value="">OSIAD	OBRA SOCIAL PARA EL PERSONAL DE LA INDUSTRIA ACEITERA, DESMOTADORA Y AFINES</option>
+                <option value="">OSA	OBRA SOCIAL DE ACTORES</option>
+                <option value="">OSTVLA	OBRA SOCIAL DE TECNICOS DE VUELO DE LINEAS AEREAS</option>
+                <option value="">OSPEA	OBRA SOCIAL DEL PERSONAL SUPERIOR Y PROFESIONAL DE EMPRESAS AEROCOMERCIALES</option>
+                <option value="">OSPA	OBRA SOCIAL DEL PERSONAL AERONAUTICO</option>
+                <option value="">OSPADEP	OBRA SOCIAL DEL PERSONAL DE AERONAVEGACION DE ENTES PRIVADOS</option>
+                <option value="">OSPTA	OBRA SOCIAL DEL PERSONAL TECNICO AERONAUTICO</option>
+                <option value="">OSA	OBRA SOCIAL DE AERONAVEGANTES</option>
+                <option value="">OSEADI	OBRA SOCIAL  EMPLEADOS DE AGENCIAS DE INFORMES</option>
+                <option value="">OSPAGA	OBRA SOCIAL DEL PERSONAL DE AGUAS GASEOSAS Y AFINES</option>
+                <option value="">OSARPYH	OBRA SOCIAL DE ALFAJOREROS, REPOSTEROS, PIZZEROS Y HELADEROS</option>
+                <option value="">OSPIA	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DE LA ALIMENTACION</option>
+                <option value="">OSPACA	OBRA SOCIAL DEL PERSONAL DEL AUTOMOVIL  CLUB ARGENTINO</option>
+                <option value="">OSPA	OBRA SOCIAL DEL PERSONAL DEL AZUCAR DEL INGENIO LA ESPERANZA</option>
+                <option value="">OSPAIL	OBRA SOCIAL DEL PERSONAL DEL AZUCAR DEL INGENIO LEDESMA</option>
+                <option value="">OSPA	OBRA SOCIAL DEL PERSONAL DEL AZUCAR DEL INGENIO SAN MARTIN</option>
+                <option value="">OSPIA	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA AZUCARERA</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE BARRACAS DE LANAS, CUEROS Y ANEXOS</option>
+                <option value="">OSPIB	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA BOTONERA</option>
+                <option value="">OSPICAL	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL CALZADO</option>
+                <option value="">OBRA SOCIAL DE CONDUCTORES CAMIONEROS Y PERSONAL DEL TRANSPORTE AUTOMOTOR DE CARGAS</option>
+                <option value="">OSPCYD	OBRA SOCIAL DEL PERSONAL DE CARGA Y DESCARGA</option>
+                <option value="">OSPACP	OBRA SOCIAL DEL PERSONAL AUXILIAR DE CASAS PARTICULARES</option>
+                <option value="">OSPIC	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL CAUCHO</option>
+                <option value="">OSPECA	OBRA SOCIAL DEL PERSONAL DEL CAUCHO</option>
+                <option value="">OSPIC SANTA FE	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL CAUCHO DE SANTA FE</option>
+                <option value="">OSPCRA	OBRA SOCIAL DEL PERSONAL DE CEMENTERIOS DE LA REPUBLICA ARGENTINA.</option>
+                <option value="">OSCE	OBRA SOCIAL DE CERAMISTAS</option>
+                <option value="">OSPCSPMYA	OBRA SOCIAL DEL PERSONAL DE LA CERAMICA, SANITARIOS, PORCELANA DE MESA Y AFINES</option>
+                <option value="">OSPACA	OBRA SOCIAL DEL PERSONAL DE LA ACTIVIDAD CERVECERA Y AFINES</option>
+                <option value="">OSPERCIN	OBRA SOCIAL DEL PERSONAL CINEMATOGRAFICO DE MAR DEL PLATA</option>
+                <option value="">OSPIC	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA CINEMATOGRAFICA</option>
+                <option value="">OSOC	OBRA SOCIAL DE OPERADORES CINEMATOGRAFICOS</option>
+                <option value="">OSCAMGLYP	OBRA SOCIAL DE COLOCADORES DE AZULEJOS, MOSAICOS, GRANITEROS, LUSTRADORES Y PORCELANEROS</option>
+                <option value="">OSCONARA	OBRA SOCIAL DE CONDUCTORES NAVALES</option>
+                <option value="">OSPATCA	OBRA SOCIAL DEL PERSONAL ADMINISTRATIVO Y TECNICO DE LA CONSTRUCCION Y AFINES</option>
+                <option value="">OSPECON	OBRA SOCIAL DEL PERSONAL DE LA CONSTRUCCION</option>
+                <option value="">OSUCI	OBRA SOCIAL DE LOS CORTADORES DE LA INDUMENTARIA</option>
+                <option value="">OSPICA	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL CUERO Y AFINES</option>
+                <option value="">OSPICHA	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL CHACINADO Y AFINES</option>
+                <option value="">OSCHOCA	OBRA SOCIAL DE CHOFERES DE CAMIONES</option>
+                <option value="">OSPEDYC	OBRA SOCIAL DEL PERSONAL DE ENTIDADES DEPORTIVAS Y CIVILES</option>
+                <option value="">OSEDA	OBRA SOCIAL DE EMPLEADOS DE DESPACHANTES DE ADUANA</option>
+                <option value="">OSPEDICI	OBRA SOCIAL DEL PERSONAL DE DISTRIBUIDORAS CINEMATOGRAFICAS</option>
+                <option value="">OSDOP	OBRA SOCIAL DE DOCENTES PARTICULARES</option>
+                <option value="">OSPERYHRA	OBRA SOCIAL DEL PERSONAL DE EDIFICIOS DE RENTA Y HORIZONTAL DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSPERYH	OBRA SOCIAL DEL PERSONAL DE EDIFICIOS DE RENTA Y HORIZONTAL DE LA CIUDAD AUTONOMA DE BUENOS AIRES  Y GRAN BUENOS AIRES</option>
+                <option value="">OSEN	OBRA SOCIAL ELECTRICISTAS NAVALES</option>
+                <option value="">OBRA SOCIAL DE OBREROS EMPACADORES DE FRUTA  DE RIO NEGRO Y NEUQUEN</option>
+                <option value="">OSPEP	OBRA SOCIAL DEL PERSONAL DE LA ENSEÑANZA PRIVADA</option>
+                <option value="">OSPEPBA	OBRA SOCIAL DEL PERSONAL DE ESCRIBANIAS DE LA PROVINCIA DE BUENOS AIRES</option>
+                <option value="">OSPE	OBRA SOCIAL DEL PERSONAL DE ESCRIBANOS</option>
+                <option value="">OSPEP	OBRA SOCIAL DEL PERSONAL DEL ESPECTACULO PUBLICO</option>
+                <option value="">OSPESGYPE	OBRA SOCIAL DEL PERSONAL DE ESTACIONES DE SERVICIO, GARAGES, PLAYAS DE ESTACIONAMIENTO Y LAVADEROS AUTOMATICOS</option>
+                <option value="">OSPF	OBRA SOCIAL DEL PERSONAL DE FARMACIA</option>
+                <option value="">OSPIF	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL FIBROCEMENTO</option>
+                <option value="">OSPIF	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA FIDEERA</option>
+                <option value="">OSPIFSE	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA FORESTAL DE SANTIAGO DEL ESTERO</option>
+                <option value="">OSPIF	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL FOSFORO, ENCENDIDO Y AFINES</option>
+                <option value="">OSFOT	OBRA SOCIAL DE FOTOGRAFOS</option>
+                <option value="">OSPAF	OBRA SOCIAL DEL PERSONAL DE LA ACTIVIDAD FRUTICOLA</option>
+                <option value="">OSFYHC	OBRA SOCIAL DEL PERSONAL DE MANIPULEO, EMPAQUE Y EXPEDICION DE FRUTA FRESCA Y HORTALIZAS DE CUYO</option>
+                <option value="">FAA	OBRA SOCIAL DE FUTBOLISTAS</option>
+                <option value="">OSTECF	OBRA SOCIAL DE TECNICOS DE FUTBOL</option>
+                <option value="">UTHGRA	OBRA SOCIAL DEL PERSONAL DEL TURISMO, HOTELERO Y GASTRONOMICO DE LA UNION  DE TRABAJADORES  DEL TURISMO HOTELEROS Y GASTRONOMICOS DE LA REPUBLICA  ARGENTINA</option>
+                <option value="">OSPG	OBRA SOCIAL DEL PERSONAL GRAFICO</option>
+                <option value="">OBRA SOCIAL DE GUINCHEROS Y MAQUINISTAS DE GRUAS MOVILES</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE CONSIGNATARIOS DEL MERCADO NACIONAL DE HACIENDA DE LINIERS</option>
+                <option value="">OSPIHMP	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL HIELO Y MERCADOS PARTICULARES</option>
+                <option value="">OSPHGBAYSI	OBRA SOCIAL DEL PERSONAL DE LOS HIPODROMOS DE BUENOS AIRES Y SAN ISIDRO</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL MENSUALIZADO DEL JOCKEY CLUB DE BUENOS AIRES Y LOS HIPODROMOS DE PALERMO Y SAN ISIDRO</option>
+                <option value="">OSPIDA	OBRA SOCIAL DEL PERSONAL DE IMPRENTA, DIARIOS Y AFINES</option>
+                <option value="">OSPEJ	OBRA SOCIAL DEL PERSONAL DE JABONEROS</option>
+                <option value="">OSJPVYF	OBRA SOCIAL DE JARDINEROS, PARQUISTAS, VIVERISTAS Y FLORICULTORES DE LA REPUBLICA ARGENTINA</option></option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DEL JOCKEY CLUB DE ROSARIO</option>
+                <option value="">OSPL	OBRA SOCIAL DEL PERSONAL LADRILLERO</option>
+                <option value="">OSPILM	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA LADRILLERA A MAQUINA</option>
+                <option value="">OSPIL	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA LECHERA</option>
+                <option value="">OSDEL	OBRA SOCIAL DE LOCUTORES</option>
+                <option value="">OSFATLYF	OBRA SOCIAL DE LA FEDERACION ARGENTINA DE TRABAJADORES DE LUZ Y FUERZA</option>
+                <option value="">OSTEE	OBRA SOCIAL DE LOS TRABAJADORES DE LAS EMPRESAS DE ELECTRICIDAD</option>
+                <option value="">OSLYF	OBRA SOCIAL DEL PERSONAL DE LUZ Y FUERZA DE CORDOBA</option>
+                <option value="">OSPIM	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA MADERERA</option>
+                <option value="">OSPM	OBRA SOCIAL DEL PERSONAL DE MAESTRANZA</option>
+                <option value="">OBRA SOCIAL DE MAQUINISTAS DE TEATRO Y TELEVISION</option>
+                <option value="">OSCOMM	OBRA SOCIAL DE CAPITANES DE ULTRAMAR Y OFICIALES DE LA MARINA MERCANTE</option>
+                <option value="">OSCAPBAQFLU	OBRA SOCIAL DE CAPITANES BAQUEANOS FLUVIALES DE LA MARINA MERCANTE</option>
+                <option value="">OSEMM	OBRA SOCIAL DE EMPLEADOS DE LA MARINA MERCANTE</option>
+                <option value="">OSEAM	OBRA SOCIAL DE ENCARGADOS APUNTADORES MARITIMOS</option>
+                <option value="">OSPM	OBRA SOCIAL DEL PERSONAL MARITIMO</option>
+                <option value="">OSMATA	OBRA SOCIAL DEL SINDICATO DE MECANICOS Y AFINES DEL TRANSPORTE AUTOMOTOR</option>
+                <option value="">OSPS MERCEDES	OBRA SOCIAL DEL PERSONAL SUPERIOR MERCEDES BENZ ARGENTINA</option>
+                <option value="">OSUOMRA	OBRA SOCIAL DE LA UNION OBRERA METALURGICA DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSSIMRA	OBRA SOCIAL DE LOS  SUPERVISORES DE LA INDUSTRIA METALMECANICA DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSPEMOM	OBRA SOCIAL DEL PERSONAL DE  MICROS Y OMNIBUS DE MENDOZA</option>
+                <option value="">O.S.A.M.	OBRA SOCIAL DE LA ACTIVIDAD MINERA</option>
+                <option value="">OSMA	OBRA SOCIAL MODELOS ARGENTINOS</option>
+                <option value="">OSPIM	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA MOLINERA</option>
+                <option value="">OSPM	OBRA SOCIAL DEL PERSONAL MOSAISTA</option>
+                <option value="">OSDEM	OBRA SOCIAL DE MUSICOS</option>
+                <option value="">OSJONR	OBRA SOCIAL DE JEFES Y OFICIALES NAVALES DE RADIOCOMUNICACIONES</option>
+                <option value="">OSJOMN	OBRA SOCIAL DE JEFES Y OFICIALES MAQUINISTAS NAVALES</option>
+                <option value="">OSPENA	OBRA SOCIAL DEL PERSONAL NAVAL</option>
+                <option value="">OSPIN	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL NEUMATICO</option>
+                <option value="">OSPIN	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA NAVAL</option>
+                <option value="">OBRA SOCIAL DE COMISARIOS NAVALES</option>
+                <option value="">OSPEP	OBRA SOCIAL DEL PERSONAL DE PANADERIAS</option>
+                <option value="">OSSPYFER	OBRA SOCIAL DE PANADEROS, PASTELEROS Y FACTUREROS DE ENTRE RIOS</option>
+                <option value="">OSPPCYQ	OBRA SOCIAL DEL PERSONAL DEL PAPEL, CARTON Y QUIMICOS</option>
+                <option value="">OSIPA	OBRA SOCIAL DE LA INDUSTRIA DE PASTAS ALIMENTICIAS</option>
+                <option value="">OSTPCHPYARA	OBRA SOCIAL TRABAJADORES  PASTELEROS, CONFITEROS, PIZZEROS , HELADEROS Y ALFAJOREROS DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OBRA SOCIAL DE PATRONES DE CABOTAJE DE RIOS Y PUERTOS</option>
+                <option value="">OSPPEA	OBRA SOCIAL DEL PERSONAL DE PELUQUERIAS, ESTETICAS Y AFINES</option>
+                <option value="">OSOFPP DE ROSARIO	OBRA SOCIAL DE OFICIALES PELUQUEROS Y PEINADORES DE ROSARIO</option>
+                <option value="">OSPAP	OBRA SOCIAL DEL PERSONAL DE LA ACTIVIDAD PERFUMISTA</option>
+                <option value="">OSTPBA	OBRA SOCIAL DE TRABAJADORES DE PRENSA DE BUENOS AIRES</option>
+                <option value="">OSPIP	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL PESCADO DE MAR DEL PLATA</option>
+                <option value="">OSPE	OBRA SOCIAL DE PETROLEROS</option>
+                <option value="">OSPEGAP	OBRA SOCIAL DEL PETROLEO Y GAS PRIVADO</option>
+                <option value="">O.S.PE.COR	OBRA SOCIAL DE PETROLEROS DE CORDOBA</option>
+                <option value="">OSPIP	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA PETROQUIMICA</option>
+                <option value="">OSPLA	OBRA SOCIAL PARA PILOTOS DE LINEAS AEREAS COMERCIALES Y REGULARES</option>
+                <option value="">UPFPARA	OBRA SOCIAL DEL PERSONAL DE FABRICAS DE PINTURA</option>
+                <option value="">OSPIP	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL PLASTICO</option>
+                <option value="">OSCEP	OBRA SOCIAL DE CAPATACES  ESTIBADORES PORTUARIOS</option>
+                <option value="">OSPA	OBRA SOCIAL DE PORTUARIOS ARGENTINOS</option>
+                <option value="">OBRA SOCIAL PORTUARIOS DE PUERTO SAN MARTIN Y BELLA VISTA</option>
+                <option value="">OSPPRA	OBRA SOCIAL DEL PERSONAL DE PRENSA DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE PRENSA DE BAHIA BLANCA</option>
+                <option value="">OSPPCHA	OBRA SOCIAL DEL PERSONAL DE PRENSA DE LA PROVINCIA DE CHACO</option>
+                <option value="">OSPREN	OBRA SOCIAL DEL PERSONAL DE PRENSA DE MAR DEL PLATA</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE PRENSA DE MENDOZA</option>
+                <option value="">OSEPC	OBRA SOCIAL DE EMPLEADOS DE PRENSA DE CORDOBA</option>
+                <option value="">OSAPM	OBRA SOCIAL DE AGENTES DE PROPAGANDA MEDICA DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OBRA SOCIAL DE AGENTES DE PROPAGANDA MEDICA DE CORDOBA</option>
+                <option value="">OSAPMER	OBRA SOCIAL DE AGENTES DE PROPAGANDA MEDICA DE ENTRE RIOS</option>
+                <option value="">OBRA SOCIAL DE AGENTES DE PROPAGANDA MEDICA DE ROSARIO</option>
+                <option value="">OSPP	OBRA SOCIAL DEL PERSONAL DE LA PUBLICIDAD</option>
+                <option value="">OSPIQYP	OBRA SOCIAL DEL PERSONAL DE INDUSTRIAS QUIMICAS Y PETROQUIMICAS</option>
+                <option value="">OSRGA	OBRA SOCIAL DE RECIBIDORES DE GRANOS Y ANEXOS</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE RECOLECCION Y BARRIDO DE ROSARIO</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE REFINERIAS DE MAIZ</option>
+                <option value="">OSRJA	OBRA SOCIAL DE RELOJEROS Y JOYEROS</option>
+                <option value="">OSPRERA	OBRA SOCIAL DEL PERSONAL RURAL Y ESTIBADORES DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSPSA	OBRA SOCIAL DEL PERSONAL DE LA SANIDAD ARGENTINA</option>
+                <option value="">OSPIS	OBRA SOCIAL DEL PERSONAL DE INSTALACIONES SANITARIAS</option>
+                <option value="">OSPSIP	OBRA SOCIAL DEL PERSONAL DE SEGURIDAD COMERCIAL, INDUSTRIAL E INVESTIGACIONES PRIVADAS</option>
+                <option value="">OBRA SOCIAL DE SERENOS DE BUQUES</option>
+                <option value="">OSPSESBA	OBRA SOCIAL DEL PERSONAL DE SUPERVISION DE LA EMPRESA SUBTERRANEOS DE BUENOS AIRES</option>
+                <option value="">OSPDESBA	OBRA SOCIAL DEL PERSONAL DE DIRECCION DE LA EMPRESA SUBTERRANEOS DE BUENOS AIRES</option>
+                <option value="">OSPIT	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA  DEL TABACO</option>
+                <option value="">OSETRA	OBRA SOCIAL DE EMPLEADOS DEL TABACO DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSTEL	OBRA SOCIAL DEL PERSONAL DE LAS TELECOMUNICACIONES DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSTRAC	OBRA SOCIAL DE TRABAJADORES DE LAS COMUNICACIONES</option>
+                <option value="">OSPTV	OBRA SOCIAL DEL PERSONAL DE TELEVISION</option>
+                <option value="">OSPIT	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA TEXTIL</option>
+                <option value="">OSETYA	OBRA SOCIAL DE EMPLEADOS TEXTILES Y AFINES</option>
+                <option value="">OSPIT	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL TRACTOR</option>
+                <option value="">OSITAC	OBRA SOCIAL DE LA INDUSTRIA DEL TRANSPORTE  AUTOMOTOR DE CORDOBA</option>
+                <option value="">OBRA SOCIAL CONDUCTORES DE TRANSPORTE COLECTIVO DE PASAJEROS</option>
+                <option value="">OSPAT	OBRA SOCIAL DEL PERSONAL DE LA ACTIVIDAD DEL TURF</option>
+                <option value="">OSTC	OBRA SOCIAL CONDUCTORES DE TAXIS DE CORDOBA</option>
+                <option value="">OBRA SOCIAL DE VAREADORES</option>
+                <option value="">OSPIV	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL VESTIDO</option>
+                <option value="">OSVVRA	OBRA SOCIAL DE VIAJANTES VENDEDORES DE LA REPUBLICA ARGENTINA. (ANDAR)</option>
+                <option value="">OSPA-VIAL	OBRA SOCIAL DEL PERSONAL DE LA ACTIVIDAD VIAL</option>
+                <option value="">OSEIV	OBRA SOCIAL DE  EMPLEADOS DE LA INDUSTRIA DEL VIDRIO</option>
+                <option value="">OSPIV	OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA DEL VIDRIO</option>
+                <option value="">OSPAV	OBRA SOCIAL DEL PERSONAL DE LA ACTIVIDAD VITIVINICOLA</option>
+                <option value="">OSPEVIC	OBRA SOCIAL DEL PERSONAL DE VIGILANCIA Y SEGURIDAD COMERCIAL, INDUSTRIAL E INVESTIGACIONES PRIVADAS DE CORDOBA</option>
+                <option value="">OSPESGA	OBRA SOCIAL DEL PERSONAL DE ESTACIONES DE SERVICIO, GARAGES, PLAYAS Y LAVADEROS AUTOMATICOS DE LA PROVINCIA DE SANTA FE</option>
+                <option value="">OSPES	OBRA SOCIAL PARA EL PERSONAL DE ESTACIONES DE SERVICIO, GARAGES, PLAYAS DE ESTACIONAMIENTO, LAVADEROS AUTOMATICOS Y GOMERIAS DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSTAD	OBRA SOCIAL DE TALLERISTAS A DOMICILIO</option>
+                <option value="">OSPESA	OBRA SOCIAL DEL PERSONAL DE SOCIEDADES DE AUTORES Y AFINES</option>
+                <option value="">OSPRO	OBRA SOCIAL DEL PERSONAL DE PRENSA DE ROSARIO</option>
+                <option value="">OSPRENTUC	OBRA SOCIAL DEL PERSONAL DE PRENSA DE TUCUMAN</option>
+                <option value="">OSTP	OBRA SOCIAL DE TRABAJADORES DE PERKINS ARGENTINA S.A.I.C</option>
+                <option value="">OSPETAX	OBRA SOCIAL DE PEONES DE TAXIS DE LA CAPITAL FEDERAL</option>
+                <option value="">OSVARA	OBRA SOCIAL DE VENDEDORES AMBULANTES DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSBARA	OBRA SOCIAL DE BOXEADORES AGREMIADOS DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSTIG	OBRA SOCIAL DE TRABAJADORES DE LA INDUSTRIA DEL GAS</option>
+                <option value="">OSPUAYE	OBRA SOCIAL DE LOS PROFESIONALES UNIVERSITARIOS DEL AGUA Y LA ENERGIA ELECTRICA</option>
+                <option value="">OSFFENTOS	OBRA SOCIAL FEDERAL DE LA FEDERACION NACIONAL DE TRABAJADORES DE OBRAS SANITARIAS</option>
+                <option value="">OSFATUN	OBRA SOCIAL DE LA FEDERACION ARGENTINA DEL TRABAJADOR  DE LAS UNIVERSIDADES NACIONALES</option>
+                <option value="">OSPCN	OBRA SOCIAL UNION PERSONAL DE LA UNION DEL  PERSONAL CIVIL DE LA NACION</option>
+                <option value="">OSADRA	OBRA SOCIAL DE ARBITROS DEPORTIVOS DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OBRA SOCIAL DE LA FEDERACION GREMIAL DE LA INDUSTRIA DE LA CARNE Y SUS DERIVADOS</option>
+                <option value="">OSTEP	OBRA SOCIAL PARA LOS TRABAJADORES DE LA EDUCACION PRIVADA</option>
+                <option value="">OSECAC	OBRA SOCIAL DE LOS EMPLEADOS DE COMERCIO Y ACTIVIDADES CIVILES</option>
+                <option value="">OSBA	OBRA SOCIAL BANCARIA ARGENTINA</option>
+                <option value="">OSCOEMA	OBRA SOCIAL DE LA CONFEDERACION DE OBREROS Y EMPLEADOS MUNICIPALES  ARGENTINA ( OSCOEMA )</option>
+                <option value="">OPZC	OBRA SOCIAL DEL PERSONAL DE INDUSTRIAS  QUIMICAS Y PETROQUIMICAS DE ZARATE CAMPANA</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE LA ACTIVIDAD AZUCARERA TUCUMANA</option>
+                <option value="">OSCRAIA	OBRA SOCIAL DE CONDUCTORES DE REMISES Y AUTOS AL INSTANTE Y AFINES</option>
+                <option value="">OSMEDICA	OBRA SOCIAL DE LOS MEDICOS DE LA CIUDAD DE BUENOS AIRES</option>
+                <option value="">OSTES	OBRA SOCIAL DE TRABAJADORES DE ESTACIONES DE SERVICIO</option>
+                <option value="">OSPETELCO	OBRA SOCIAL DEL PERSONAL DE TELECOMUNICACIONES SINDICATO BUENOS AIRES</option>
+                <option value="">OSMMEDT	OBRA SOCIAL DE MANDOS MEDIOS DE TELECOMUNICACIONES EN LA REPUBLICA ARGENTINA Y MERCOSUR</option>
+                <option value="">OBRA SOCIAL DE TRABAJADORES VIALES Y AFINES DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSOETSYLARA	OBRA SOCIAL DE OBREROS Y EMPLEADOS TINTOREROS SOMBREREROS Y LAVADEROS DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSADEF	OBRA SOCIAL DE  LAS ASOCIACIONES DE EMPLEADOS DE FARMACIA</option>
+                <option value="">OSOSS	OBRA SOCIAL PARA EL PERSONAL DE OBRAS Y SERVICIOS SANITARIOS</option>
+                <option value="">OSPESCHA	OBRA SOCIAL PERSONAL ESTACIONES DE SERVICIO,GARAGES,PLAYAS Y LAVADEROS DE LA PROVINCIA DEL CHACO</option>
+                <option value="">OSLYF PATAGONIA	OBRA SOCIAL DE LUZ Y FUERZA DE LA PATAGONIA</option>
+                <option value="">OS.PE.PRI	OBRA SOCIAL DE PETROLEROS PRIVADOS</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE LA FEDERACION DE SINDICATOS DE LA INDUSTRIA QUIMICAS Y PETROQUIMICAS DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSUTI	OBRA SOCIAL DE LA UNION DE TRABAJADORES DEL INSTITUTO NACIONAL DE SERVICIOS SOCIALES PARA JUBILADOS Y PENSIONADOS DE LA REPUBLICA ARGENTINA</option>
+                <option value="">OSPEC	OBRA SOCIAL DEL PERSONAL DE LA EMPRESA NACIONAL DE CORREOS Y TELEGRAFOS S.A. Y DE LAS  COMUNICACIONES DE LA REPULICA ARGENTINA</option>
+                <option value="">JOHNSON	OBRA SOCIAL CERAS JOHNSON</option>
+                <option value="">DITEM	OBRA SOCIAL PARA DIRECTIVOS, TECNICOS Y EMPLEADOS DE JOHN DEERE ARGENTINA</option>
+                <option value="">OBRA SOCIAL COMPANIA MINERA AGUILAR S.A</option>
+                <option value="">COMPIR	OBRA SOCIAL COOPERATIVA DE ASISTENCIA MUTUA Y TURISMO DEL PERSONAL DE LAS SOCIEDADES PIRELLI LTDA.</option>
+                <option value="">OSRM	OBRA SOCIAL REFINERIAS DE MAIZ S.A.I.C.F.</option>
+                <option value="">OBRA SOCIAL SUPERCO</option>
+                <option value="">OBRA SOCIAL CABOT ARGENTINA</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL SHELL-CAPSA</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE PBBPOLISUR  SA  DE  BAHIA BLANCA</option>
+                <option value="">OBRA SOCIAL DE FORD AGENTINA S.C.A</option>
+                <option value="">OBRA SOCIAL DE VOLKSWAGEN ARGENTINA S.A.</option>
+                <option value="">OPDEA	OBRA SOCIAL DEL PERSONAL DE DIRECCION DE LAS EMPRESAS DE LA ALIMENTACION Y DEMAS ACTIVIDADES EMPRESARIAS</option>
+                <option value="">OSPREME	OBRA SOCIAL DEL PERSONAL DE DIRECCION DE LA INDUSTRIA AUTOMOTRIZ ARGENTINA</option>
+                <option value="">CAMPSIC	OBRA SOCIAL COOPERATIVA LTDA.  DE ASISTENCIA MEDICA ,FARMACEUTICA,CREDITO, Y CONSUMO DEL PERSONAL SUPERIOR DE LA INDUSTRIA DEL CAUCHO Y OTRAS ACTIVIDADES   INDUSTRIALES</option>
+                <option value="">SERVESALUD	OBRA SOCIAL DEL PERSONAL DE DIRECCION DE LA INDUSTRIA CERVECERA Y MALTERA</option>
+                <option value="">APDJIC	OBRA SOCIAL DE LA ASOCIACION DEL PERSONAL DE DIRECCION Y JERARQUICO DE LA INDUSTRIA DEL CIGARRILLO</option>
+                <option value="">OSDIC	OBRA SOCIAL DEL PERSONAL DIRECTIVO DE LA INDUSTRIA DE LA CONSTRUCCION</option>
+                <option value="">OSCICA	OBRA SOCIAL CAMARA DE LA INDUSTRIA CURTIDORA ARGENTINA</option>
+                <option value="">OSDE	OBRA SOCIAL DE EJECUTIVOS Y DEL PERSONAL DE DIRECCION DE EMPRESAS</option>
+                <option value="">ASE	OBRA SOCIAL ACCION SOCIAL DE EMPRESARIOS</option>
+                <option value="">FRUTOS	OBRA SOCIAL DEL PERSONAL DE DIRECCION DE LAS EMPRESAS QUE ACTUAN EN FRUTOS DEL PAIS</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE DIRECCION ALFREDO FORTABAT</option>
+                <option value="">OSIM	OBRA SOCIAL DEL PERSONAL DE DIRECCION DE LA INDUSTRIA METALURGICA  Y DEMAS ACTIVIDADES EMPRESARIAS</option>
+                <option value="">OSMAD	OBRA SOCIAL PARA EL PERSONAL DE DIRECCION DE LA INDUSTRIA MADERERA</option>
+                <option value="">OSDIPP	OBRA SOCIAL DEL PERSONAL DE DIRECCION DE LA INDUSTRIA PRIVADA DEL PETROLEO</option>
+                <option value="">OSDEPYM	OBRA SOCIAL  DE EMPRESARIOS, PROFESIONALES Y MONOTRIBUTISTAS</option>
+                <option value="">AMPAR	OBRA SOCIAL ASOCIACION MUTUAL DEL PERSONAL DE PHILIPS ARGENTINA (AMPAR)</option>
+                <option value="">WHOPE	OBRA SOCIAL DEL PERSONAL DE DIRECCION DE PERFUMERIA E.W. HOPE</option>
+                <option value="">OSLPASTEUR	OBRA SOCIAL DEL PERSONAL DE DIRECCION DE SANIDAD LUIS PASTEUR</option>
+                <option value="">APDIS	OBRA SOCIAL ASOCIACION DEL PERSONAL DE DIRECCION DE LA INDUSTRIA SIDERURGICA</option>
+                <option value="">OSMITA	OBRA SOCIAL MUTUALIDAD INDUSTRIAL TEXTIL ARGENTINA</option>
+                <option value="">APSOT	OBRA SOCIAL ASOCIACION DEL PERSONAL SUPERIOR DE LA ORGANIZACION TECHINT</option>
+                <option value="">OSEDEIV	OBRA SOCIAL PARA EL PERSONAL DE DIRECCION DE LA INDUSTRIA VITIVINICOLA Y AFINES</option>
+                <option value="">OSYPF	OBRA SOCIAL YPF</option>
+                <option value="">ASSPE	OBRA SOCIAL ASOCIACION DE SERVICIOS SOCIALES PARA EMPRESARIOS Y PERSONAL DE DIRECCION DE EMPRESAS DEL COMERCIO, SERVICIOS, PRODUCCION, INDUSTRIA Y CIVIL (ASSPE )</option>
+                <option value="">OBRA SOCIAL DE DIRECCION OSDO</option>
+                <option value="">OBRA SOCIAL DE DIRECCION DE LA ACTIVIDAD AEROCOMERCIAL  PRIVADA</option>
+                <option value="">OBRA SOCIAL DE DIRECCIÓN WITCEL</option>
+                <option value="">PAMI - INSSJP	INSTITUTO NACIONAL DE SERVICIOS SOCIALES PARA JUBILADOS Y PENSIONADOS</option>
+                <option value="">ASOCIACION DE OBRAS SOCIALES DE BELLA VISTA</option>
+                <option value="">ASOCIACION DE OBRAS SOCIALES DE COMODORO RIVADAVIA</option>
+                <option value="">ADOS ESPERANZA	ASOCIACION DE OBRAS SOCIALES DE ESPERANZA</option>
+                <option value="">ASOCIACION GUALEGUAYCHU DE OBRAS SOCIALES</option>
+                <option value="">ASOCIACION DE OBRAS SOCIALES DE GUALEGUAY</option>
+                <option value="">ADOS MAR DEL PLATA	ASOCIACION DE OBRAS SOCIALES DE MAR DEL PLATA</option>
+                <option value="">ADOS ROSARIO	ASOCIACION DE OBRAS SOCIALES DE ROSARIO</option>
+                <option value="">ASOCIACION DE OBRAS SOCIALES DE RUFINO</option>
+                <option value="">ASOCIACION DE OBRAS SOCIALES DE SAN JORGE</option>
+                <option value="">ASOCIACION DE OBRAS SOCIALES DE TRELEW</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL MUNICIPAL DE AVELLANEDA</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL MUNICIPAL DE LA MATANZA</option>
+                <option value="">OBRA SOCIAL PARA EL  PERSONAL MUNICIPAL DE TRES DE FEBRERO</option>
+                <option value="">OBRA SOCIAL ATANOR S.A</option>
+                <option value="">OBRA SOCIAL PAPEL MISIONERO S.A.I.F. Y C.</option>
+                <option value="">OBRA SOCIAL ACEROS PARANA</option>
+                <option value="">OSPEF Y EPCA	OBRA SOCIAL DEL PERSONAL DE EMPRESAS FIAT Y EMPRESAS PEUGEOT CITROEN ARGENTINA</option>
+                <option value="">DAMSU	DIRECCION GENERAL DE ASISTENCIA MEDICA SOCIAL UNIVERSITARIA</option>
+                <option value="">APOS	ADMINISTRACION PROVINCIAL DE OBRA SOCIAL - LA RIOJA</option>
+                <option value="">OSEP-M	OBRA SOCIAL DE EMPLEADOS PUBLICOS DE MENDOZA - OSEP</option>
+                <option value="">IPROSS	OBRA SOCIAL PROSS-RIO NEGRO</option>
+                <option value="">CAR IOSE NOROESTE</option>
+                <option value="">MINISTERIO DEL INTERIOR POLICIA FEDERAL ARGENTINA</option>
+                <option value="">ART PREVENCION	ART PREVENCION S.A.</option>
+                <option value="">SIN COBERTURA	SIN COBERTURA</option>
+                <option value="">DOS	DIREC. OBRA SOC. DE EMPLEADOS PUBLICOS SAN JUAN</option>
+                <option value="">SUMAR	PROGRAMA SUMAR</option>
+                <option value="">PROFE	INCLUIR SALUD</option>
+                <option value="">UTE	OBRA SOCIAL UNION DE LOS TRABAJADORES DE LA EDUCACIÓN</option>
+                <option value="">BOREAL	BOREAL - COBERTURA DE SALUD</option>
+                <option value="">MEDISALUD	OBRA SOCIAL MEDISALUD</option>
+                <option value="">STOTAC	STOTAC - SINDICATO DE TRABAJADORES Y OBREROS DEL TRANSPORTE AUTOMOTOR DE CARGAS</option>
+                <option value="">ASISTIR	OBRA SOCIAL ASISTIR</option>
+                <option value="">JERARQUICOS SALUD	OBRA SOCIAL JERARQUICOS SALUD</option>
+                <option value="">IOSE	OBRA SOCIAL DEL EJERCITO ARGENTINO</option>
+                <option value="">COLMED	COLMED SALUD</option>
+                <option value="">OMINT	OMINT</option>
+                <option value="">IOSFA	Instituto de Obra Social de las Fuerzas Armadas</option>
+                <option value="">CIMAC	Centro Integral de Medicina de Alta Complejidad</option>
+                <option value="">GALENO	Galeno</option>
+                <option value="">SCIS	SCIS Medicina Privada</option>
+                <option value="">Medicus	Medicus</option>
+                <option value="">Swiss Medical	Swiss Medical Group</option>
+                <option value="">LANUSSE 	COCHERIA LANUSSE HNOS</option>
+                <option value="">DIBA	DIRECCION DE BIENESTAR DE LA ARMADA</option>
+                <option value="">MUTUAL DEL PERSONAL DE AGUA Y ENERGIA ELECTRICA DE CAPITAL FEDERAL</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DEL AZUCAR DEL INGENIO RIO GRANDE</option>
+                <option value="">OBRA SOCIAL DIRECCION NACIONAL DE VIALIDAD</option>
+                <option value="">OBRA SOCIAL MUTUALIDAD EMPLEADOS FIRESTONE</option>
+                <option value="">OBRA SOCIAL DE  ALLIED DOMECQ ARGENTINA S.A.</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE LA UNIVERSIDAD NACIONAL DE LA PATAGONIA SAN JUAN BOSCO</option>
+                <option value="">OBRA SOCIAL DE LA UNIVERSIDAD NACIONAL DEL LITORAL</option>
+                <option value="">OBRA SOCIAL DEL PERSONAL DE LA UNIVERSIDAD NACIONAL DEL CENTRO DE DE LA PROVINCIA DE BUENOS AIRES</option>
+                <option value="">ASOCIACION DE OBRAS SOCIALES DE SAN JUAN</option>
+                <option value="">O.S.P. CIUDAD AUT. DE BUENOS AIRES</option>
+                <option value="">IOMA	O.S.P. BUENOS AIRES (IOMA)</option>
+                <option value="">OSEP	O.S.P. CATAMARCA (OSEP)</option>
+                <option value="">APOSS	O.S.P. CORDOBA (APOSS)</option>
+                <option value="">IOSCOR	O.S.P. CORRIENTES (IOSCOR)</option>
+                <option value="">IOSPER	O.S.P. ENTRE RIOS (IOSPER)</option>
+                <option value="">ISJ	O.S.P. JUJUY (ISJ)</option>
+                <option value="">O.S.P. LA RIOJA</option>
+                <option value="">O.S.P. MENDOZA</option>
+                <option value="">IPS SALTA	O.S.P. SALTA (IPS)</option>
+                <option value="">O.S.P. SAN LUIS</option>
+                <option value="">IAPOSS	O.S.P. SANTA FE (IAPOSS)</option>
+                <option value="">IOSEP	O.S.P. SANTIAGO DEL ESTERO (IOSEP)</option>
+                <option value="">IPSST	O.S.P. TUCUMAN (IPSST)</option>
+                <option value="">INSSSEP	O.S.P. CHACO (INSSSEP)</option>
+                <option value="">SEROS	O.S.P. CHUBUT (SEROS)</option>
+                <option value="">IMPF	O.S.P. FORMOSA (IMPF)</option>
+                <option value="">AMP	O.S.P. FORMOSA (AMP)</option>
+                <option value="">SEMPRE	O.S.P. LA PAMPA (SEMPRE)</option>
+                <option value="">IPS MISIONES	O.S.P. MISIONES (IPS)</option>
+                <option value="">O.S.P. NEUQUEN</option>
+                <option value="">O.S.P. SANTA CRUZ</option>
+                <option value="">IPAUSS	O.S.P. TIERRA DEL FUEGO(IPAUSS)</option>
+
+              </select>
+
+
             </div>
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
               <label for="inpPTel">Teléfono:</label>
-              <input id="inpPTel" type="text" class="form-control">
+              <input id="inpPTel" type="number" class="form-control">
             </div>
 
           </div>
@@ -143,6 +506,7 @@
 
               <label for="select2Departamento">Departamento:</label></br>
               <select id="select2Departamento" class="select2input">
+                <option value="">Otro</option>
                 <option value="">25 de Mayo</option>
                 <option value="">9 de Julio</option>
                 <option value="">Albardón</option>
@@ -179,14 +543,14 @@
 
       <div class="row">
 
-        <label for="sepTurno">Datos del turno</label>
+        <label for="sepTurno">Origen del turno</label>
         <div class="separador row" id="sepTurno">
 
           <div class="row">
 
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
-              <label for="select2Especialidad">Especialidad:</label></br>
+              <label for="select2Especialidad">Especialidad que solicita:</label></br>
               <select id="select2Especialidad" class="select2input">
                 <option value="">028-01 GINECOLOGIA CONTROL DE EMBARAZO</option>
                 <option value="">043-01 CIRUGIA ODONTOLOGICA</option>
@@ -283,7 +647,7 @@
 
             </div>
 
-            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
               <label for="radTurno">Tipo de turno:</label>
               <form id="radTurno">
                 <div class="radio">
@@ -298,6 +662,21 @@
               </form>
             </div>
 
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+              <div  class="form-group">
+
+                <label for="selAtendido">Atendido:</label>
+                <select class="form-control picker" id="selAtendido">
+                  <option value="0">No</option>
+                  <option value="1">Si</option>
+                </select>
+              </div>
+
+            </div>
+
+
+
         </div>
 
           <div id="contTurno">
@@ -306,6 +685,42 @@
           </div>
 
       </div>
+        <label for="sepEstado">Estado del turno</label>
+        <div class="separador row" id="sepEstado">
+
+          <div  class="form-group">
+
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+              <label for="selProgramado">Programado:</label>
+              <select class="form-control picker" id="selProgramado">
+                <option value="1">Si</option>
+                <option value="0">Turno sin resolver</option>
+              </select>
+
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+
+
+          </div>
+
+          <div class="row" id="contEstado">
+
+            <div id="sinProgramar">
+
+              <p>sin programar</p>
+            </div>
+
+            <div id="programado">
+
+              <p>programado</p>
+            </div>
+          </div>
+
+        </div>
+
+
 
       <div class="row">
 
@@ -380,13 +795,52 @@
     $(document).ready(function() {
       $("#select2Departamento").select2();
       $("#select2Especialidad").select2();
+      $("#select2OS").select2();
 
 
-
+      //carga html según tipo de turno elegido
       $('input[type=radio][name=optradio]').change(function() {
         $.get(this.value+".html", function(data){
           $("#contTurno").html(data);
         });
+
+      });
+
+      //calculo de edad https://stackoverflow.com/questions/10008050/get-age-from-birthdate
+      function getAge(dateString)
+      {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate()))
+        {
+          age--;
+        }
+        return age;
+      }
+
+      //rellena el campo de edad
+      $("#datePNacimiento").change(function(){
+        $("#Edad").val(getAge($("#datePNacimiento").data('datepicker').viewDate));
+      });
+
+      //selecciona si fue o no atendido y esconde el estado del
+      $("#selAtendido").change(function(){
+
+        if(this.value == '1'){
+          $("#sepEstado").hide();
+
+        }else{
+          $("#sepEstado").show();
+
+
+        }
+      });
+
+
+      $("#enviar").click(function(){
+
 
       });
 
