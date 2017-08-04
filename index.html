@@ -8,8 +8,8 @@
     <script src="node_modules/jquery/dist/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
 
     <!--Select 2 js-->
-    <script type="text/javascript" src="node_modules/select2/dist/js/select2.full.min.js"></script>
-    <script type="text/javascript" src="node_modules/select2/dist/js/i18n/es.js"></script>
+    <script type="text/javascript" src="node_modules/select2/dist/js/select2.min.js"></script>
+
 
     <!--Select 2 css-->
     <link href="node_modules/select2/dist/css/select2.min.css" rel="stylesheet">
@@ -54,7 +54,7 @@
                 <label for="selPT">PROTUR que carga:</label>
                 <select class="form-control picker" id="selPT">
                   <option>Gimena Chimino</option>
-                  <option>Ella normal</option>
+                  <option>Costa Alejandra</option>
                 </select>
               </div>
 
@@ -121,6 +121,8 @@
                   <option>No</option>
                   <option>Diaguita</option>
                   <option>Huarpe</option>
+                  <option>Otro</option>
+                  <option>No sabe</option>
                 </select>
               </div>
             </div>
@@ -687,81 +689,55 @@
         <label for="sepEstado" class="estado">Estado del turno</label>
         <div class="separador row estado" id="sepEstado">
 
-          <div class="row">
-            <div  class="form-group">
-
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-
-                <label for="selProgramado">Programado:</label>
-                <select class="form-control picker" id="selProgramado">
-                  <option value="1">Si</option>
-                  <option value="0">Turno sin resolver</option>
-                </select>
-
-              </div>
-
-          </div>
-
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-
-          </div>
 
 
-          <div class="row">
-            <div class="row" id="contEstado">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
-
-              <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="sinProgramar">
-
-                  <label for="select2Motivo">Motivo:</label></br>
-                  <select id="select2Motivo" class="select2input">
-
-                    <option value="">AGENDA COMPLETA</option>
-                    <option value="">AGENDA NO PROGRAMADA</option>
-                    <option value="">ARTICULO</option>
-                    <option value="">ASAMBLEA SINDICATO MEDICO</option>
-                    <option value="">ASISTENCIA A SEMINARIO</option>
-                    <option value="">CAMBIO DE HORARIO</option>
-                    <option value="">CARENCIA DE TURNOS</option>
-                    <option value="">COMISIONADO</option>
-                    <option value="">DIA DE LA SANIDAD</option>
-                    <option value="">FALTA ESPECIALIDAD</option>
-                    <option value="">JORNADA OBLIGATORIA EN CENTRO DE SALUD</option>
-                    <option value="">NO DAN TURNOS ESTE DIA</option>
-                    <option value="">PARTE MEDICO</option>
-                    <option value="">PERMISO DE SALIDA</option>
-                    <option value="">PROFESIONAL DE LICENCIA</option>
-                    <option value="">RETIRO SIN AVISO</option>
-                    <option value="">REUNION DE EQUIPO</option>
-                    <option value="">SALIDA URGENTE</option>
-                    <option value="">SERVICIO SUSPENDIDO</option>
-
-                  </select>
-
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-
-              </div>
-
-              <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="programado">
-
-
-                    <label for="dateTurno">Fecha del turno programado:</label>
-                    <input type="text" id="dateTurno" class="form-control">
-
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-
-              </div>
-
-              </div>
+              <label for="selProgramado">Programado:</label>
+              <select class="form-control picker" id="selProgramado">
+                <option value="1">Si</option>
+                <option value="0">Turno sin resolver</option>
+              </select>
 
             </div>
+
+
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="sinProgramar">
+
+                <label for="select2Motivo">Motivo:</label></br>
+                <select id="select2Motivo" class="select2input">
+
+                  <option value="">AGENDA COMPLETA</option>
+                  <option value="">AGENDA NO PROGRAMADA</option>
+                  <option value="">ARTICULO</option>
+                  <option value="">ASAMBLEA SINDICATO MEDICO</option>
+                  <option value="">ASISTENCIA A SEMINARIO</option>
+                  <option value="">CAMBIO DE HORARIO</option>
+                  <option value="">CARENCIA DE TURNOS</option>
+                  <option value="">COMISIONADO</option>
+                  <option value="">DIA DE LA SANIDAD</option>
+                  <option value="">FALTA ESPECIALIDAD</option>
+                  <option value="">JORNADA OBLIGATORIA EN CENTRO DE SALUD</option>
+                  <option value="">NO DAN TURNOS ESTE DIA</option>
+                  <option value="">PARTE MEDICO</option>
+                  <option value="">PERMISO DE SALIDA</option>
+                  <option value="">PROFESIONAL DE LICENCIA</option>
+                  <option value="">RETIRO SIN AVISO</option>
+                  <option value="">REUNION DE EQUIPO</option>
+                  <option value="">SALIDA URGENTE</option>
+                  <option value="">SERVICIO SUSPENDIDO</option>
+
+                </select>
+              </div>
+
+
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" id="programado">
+
+
+                  <label for="dateTurno">Fecha del turno programado:</label>
+                  <input type="text" id="dateTurno" class="form-control">
+              </div>
+
 
           </div>
 
@@ -776,15 +752,14 @@
 
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <button type="button" id="enviar" class="bnt btn-success">Guardar Registro</button>
+            <button type="button" id="exportar" class="bnt btn-success">Exportar Registros</button>
           </div>
 
         </div>
       </div>
 
 
-
     </div>
-
 
 
   </body>
@@ -831,7 +806,7 @@
       maxViewMode: 1,
       todayBtn: "linked",
       language: "es",
-      orientation: "bottom right",
+      orientation: "top right",
       daysOfWeekHighlighted: "1,2,3,4,5",
       autoclose: true,
       todayHighlight: true
