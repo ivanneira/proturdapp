@@ -13,7 +13,14 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1250, height: 768})
+  mainWindow = new BrowserWindow(
+      {
+        'minHeight': 860,
+        'minWidth': 1040,
+        'width': 1040,
+        'height': 860
+      }
+  )
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -39,6 +46,10 @@ function createWindow () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow)
+
+app.on('browser-window-created',function(e,window) {
+  window.setMenu(null);
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {

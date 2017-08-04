@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Sistema de registro de PROTUR</title>
 
     <!--jQuery js-->
     <script src="node_modules/jquery/dist/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
@@ -36,34 +36,30 @@
 
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
-              <div class="form-group">
-
                 <label for="selCS">Centro de Salud:</label>
                 <select class="form-control picker" id="selCS">
                   <option>Hospital Marcial Quiroga</option>
                   <option>Hospital Guillermo Rawson</option>
                 </select>
-              </div>
 
             </div>
 
+
+
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
-              <div class="form-group">
-
-                <label for="selPT">PROTUR que carga:</label>
-                <select class="form-control picker" id="selPT">
-                  <option>Gimena Chimino</option>
-                  <option>Costa Alejandra</option>
-                </select>
-              </div>
+              <label for="selPT">PROTUR que carga:</label>
+              <select class="form-control picker" id="selPT">
+                <option>Gimena Chimino</option>
+                <option>Costa Alejandra</option>
+              </select>
 
             </div>
 
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
               <label for="dateCarga">Fecha de carga:</label>
-              <input type="text" id="dateCarga" class="form-control">
+              <input style="text-align: center" type="text" id="dateCarga" class="form-control">
 
             </div>
 
@@ -97,12 +93,12 @@
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
               <label for="dateCarga">Fecha de nacimiento:</label>
-              <input type="text" id="datePNacimiento" class="form-control">
+              <input style="text-align: center" type="text" id="datePNacimiento" class="form-control">
             </div>
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
               <label for="Edad">Edad:</label>
-              <input type="text" disabled="disabled" id="Edad" class="form-control">
+              <input style="text-align: center" type="text" disabled="disabled" id="Edad" class="form-control">
             </div>
           </div>
 
@@ -735,7 +731,7 @@
 
 
                   <label for="dateTurno">Fecha del turno programado:</label>
-                  <input type="text" id="dateTurno" class="form-control">
+                  <input style="text-align: center" type="text" id="dateTurno" class="form-control">
               </div>
 
 

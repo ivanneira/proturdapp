@@ -43,6 +43,8 @@ button {
 .separador {
 
     border: 2px solid;
+    padding: 1.5%;
+    border-radius: 5px 5px 5px 5px!important;
 }
 
 #dateCarga {
@@ -51,10 +53,6 @@ button {
 
 }
 
-.separador {
-    padding: 10px;
-    border-radius: 5px 5px 5px 5px!important;
-}
 
 .picker {
 
@@ -337,19 +335,25 @@ Link : http://techhysahil.com
     float: right;
 }
 
-.select2input {
-
-    width: 270px;
-}
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: #fff;
     background-color: #112;
     border-radius: 20px 20px 20px 20px!important;
     border: 1px solid #00FFF7;
+
+    width: 100% !important;
+    display: inherit;
 }
-
-
+.select2-container {
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+}
+.select2input{
+    width: 50%;
+}
 .select2-container--default .select2-selection--single {
 
     color: #bcd2d8 !important;
@@ -370,4 +374,10 @@ li.select2-results__option {
 
 li.select2-results__option--highlighted {
     color: black !important;
+}
+
+.row {
+
+    margin-right: 0px;
+    margin-left:  0px;
 }
