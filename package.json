@@ -13,8 +13,11 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "dialog": "^0.3.0",
+    "fs": "0.0.1-security",
     "jquery": "^3.2.1",
     "load-json-file": "^2.0.0",
+    "remote": "^0.2.6",
     "select2": "^4.0.3"
   }
 }

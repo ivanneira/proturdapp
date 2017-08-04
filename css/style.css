@@ -381,3 +381,11 @@ li.select2-results__option--highlighted {
     margin-right: 0px;
     margin-left:  0px;
 }
+
+.modal-content {
+    background-color: #122;
+}
+
+.modal-title {
+    color: white;
+}
