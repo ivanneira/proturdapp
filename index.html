@@ -22,6 +22,9 @@
 
     <!--Estilos css-->
     <link href="css/style.css" rel="stylesheet">
+
+    <!--animate css-->
+    <link href="node_modules/animate.css/animate.min.css" rel="stylesheet">
   </head>
   <body>
 
@@ -677,7 +680,7 @@
 
             </div>
 
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="tipoDeTurno">
               <label for="radTurno">Tipo de turno:</label>
               <form id="radTurno">
                 <div class="radio">
@@ -779,7 +782,7 @@
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 
           <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <button type="button" id="guardar" class="bnt btn-success">Guardar Registro</button>
+            <button type="button" id="guardar" class="bnt btn-success">Verificar y Guardar</button>
             <button type="button" id="exportar" class="bnt btn-success" data-toggle="modal" data-target="#myModal">Exportar Registros</button>
           </div>
 
@@ -798,6 +801,10 @@
   <!--Datepicker js-->
   <script src="js/bootstrap-datepicker.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
   <script src="js/bootstrap-datepicker.es.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+
+  <!--verificadores js-->
+  <script src="js/verificadores.js"></script>
+
 
   <!--scripts de controles fuera del DOM-->
   <script>
@@ -936,7 +943,8 @@
 
       $("#guardar").click(function(){
 
-          alert("El registro se guardó con éxito");
+          verificar();
+
       });
 
 

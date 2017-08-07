@@ -15,10 +15,10 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow(
       {
-        'minHeight': 860,
+        'minHeight': 300,
         'minWidth': 1040,
         'width': 1040,
-        'height': 860
+        'height': 500
       }
   )
 
@@ -30,7 +30,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
