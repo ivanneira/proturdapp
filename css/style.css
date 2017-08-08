@@ -395,6 +395,7 @@ li.select2-results__option--highlighted {
 }
 
 .incorrecto {
-    color: #fff !important;
-    background-color: #c12e2a !important;
+    background-color: #52001f !important;
+
+    border: solid 3px #f00;
 }
