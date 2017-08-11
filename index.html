@@ -39,11 +39,11 @@
           <div class="input-daterange" id="datepickerRange" >
 
             <form class="form-inline text-center" role="form">
-              <label for="desde">Desde</label>
-              <input type="text" class="form-control" name="desde" id="desde" />
+              <label for="expDesde">Desde</label>
+              <input type="text" class="form-control" id="expDesde" />
 
-              <label for="hasta">Hasta</label>
-              <input type="text" class="form-control" name="hasta" id="hasta" />
+              <label for="expHasta">Hasta</label>
+              <input type="text" class="form-control"  id="expHasta" />
             </form>
           </div>
 
@@ -58,7 +58,7 @@
   <!-- Modal FIN -->
 
   <!-- Modal Avisos -->
-  <div class="modal fade" id="aviso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="aviso" tabindex="-2" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -80,7 +80,7 @@
   </div>
   <!-- Modal Avisos FIN -->
 
-    <h4 id="titulo">Sistema de registro PROTUR</h4>
+    <h4 id="titulo">Herramienta de carga PROTUR</h4>
 
     <div class="container">
 
@@ -533,7 +533,7 @@
               <div class="form-group">
 
                 <label for="selPO">Pueblos originarios:</label>
-                <select class="form-control picker" id="selPO">
+                <select class="form-control picker" id="selPO" tabindex="9">
                   <option value="0">No</option>
                   <option value="1">Diaguita</option>
                   <option value="2">Huarpe</option>
@@ -547,7 +547,7 @@
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 
               <label for="select2OS">Obra social:</label></br>
-              <select id="select2OS" class="select2input">
+              <select id="select2OS" class="select2input"  tabindex="10">
                 <option value="0">No</option>
                 <option value="1">OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA GRAFICA DE LA PROVINCIA DE CORDOBA</option>
                 <option value="2">OSPA	OBRA SOCIAL PORTUARIOS ARGENTINOS DE MAR DEL PLATA</option>
@@ -914,7 +914,7 @@
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
               <label for="inpPTel">Teléfono:</label>
-              <input id="inpPTel" type="number" class="form-control">
+              <input id="inpPTel" type="number" class="form-control"  tabindex="11">
             </div>
 
           </div>
@@ -924,7 +924,7 @@
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
               <label for="select2Departamento">Departamento:</label></br>
-              <select id="select2Departamento" class="select2input">
+              <select id="select2Departamento" class="select2input" tabindex="12">
                 <option value="0">Otro</option>
                 <option value="1">25 de Mayo</option>
                 <option value="2">9 de Julio</option>
@@ -952,7 +952,7 @@
 
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
               <label for="inpPDom">Domicilio:</label>
-              <input id="inpPDom" type="text" class="form-control">
+              <input id="inpPDom" type="text" class="form-control"  tabindex="13">
             </div>
 
 
@@ -970,7 +970,7 @@
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
               <label for="select2Especialidad">Especialidad que solicita:</label></br>
-              <select id="select2Especialidad" class="select2input">
+              <select id="select2Especialidad" class="select2input"  tabindex="14">
                 <option value="1">028-01 GINECOLOGIA CONTROL DE EMBARAZO</option>
                 <option value="2">043-01 CIRUGIA ODONTOLOGICA</option>
                 <option value="3">043-02 ODONTOLOGIA PERIODONCIA </option>
@@ -1070,13 +1070,13 @@
               <label for="radTurno">Tipo de turno:</label>
               <form id="radTurno">
                 <div class="radio">
-                  <label class="radio-inline"><input type="radio" name="optradio" value="1" id="optDerivado">Derivado</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="1" id="optDerivado" tabindex="15">Derivado</label>
 
-                  <label class="radio-inline"><input type="radio" name="optradio" value="2" id="optInterconsulta">Interconsulta</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="2" id="optInterconsulta" tabindex="16">Interconsulta</label>
 
-                  <label class="radio-inline"><input type="radio" name="optradio" value="3" id="optEspontanea">D.Espontánea</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="3" id="optEspontanea" tabindex="17">D.Espontánea</label>
 
-                  <label class="radio-inline"><input type="radio" name="optradio" value="4" id="optTransito">P.Tránsito</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="4" id="optTransito" tabindex="18">P.Tránsito</label>
                 </div>
               </form>
             </div>
@@ -1086,7 +1086,7 @@
               <div  class="form-group">
 
                 <label for="selAtendido">Atendido:</label>
-                <select class="form-control picker" id="selAtendido">
+                <select class="form-control picker" id="selAtendido"  tabindex="19">
                   <option value="0">No</option>
                   <option value="1">Si</option>
                 </select>
@@ -1111,7 +1111,7 @@
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
               <label for="selProgramado">Programado:</label>
-              <select class="form-control picker" id="selProgramado">
+              <select class="form-control picker" id="selProgramado"  tabindex="20">
                 <option value="1">Si</option>
                 <option value="0">Turno sin resolver</option>
               </select>
@@ -1154,7 +1154,7 @@
 
 
                   <label for="select2CAPSProg">Centro de en el que se programa:</label></br>
-                  <select id="select2CAPSProg" class="select2input">
+                  <select id="select2CAPSProg" class="select2input"  tabindex="21">
 
                     <option value="">HTAL. DR. GUILLERMO RAWSON</option>
                     <option value="">SERVI.DE PEDIATRIA DR. JUAN CARLOS NAVARRO</option>
@@ -1337,7 +1337,7 @@
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
                   <label for="dateTurno">Fecha del turno programado:</label>
-                  <input style="text-align: center" type="text" id="dateTurno" class="form-control">
+                  <input style="text-align: center" type="text" id="dateTurno" class="form-control"  tabindex="22">
 
                 </div>
               </div>
@@ -1354,7 +1354,7 @@
 
           <button type="button" id="ayuda" class="bnt btn-success" >Ayuda</button>
           <button type="button" id="exportar" class="bnt btn-success" data-toggle="modal" data-target="#myModal">Exportar Registros</button>
-          <button type="button" id="guardar" class="bnt btn-success">Verificar y Guardar</button>
+          <button type="button" id="guardar" class="bnt btn-success"  tabindex="23">Verificar y Guardar</button>
 
         </div>
         
@@ -1544,6 +1544,53 @@
         });
 
         $("#aviso").modal('show');
+
+      });
+
+      $("#exportarDatos").click(function(){
+
+        var desde = $("#expDesde").data("datepicker").viewDate.getTime();
+        var hasta = $("#expHasta").data("datepicker").viewDate.getTime();
+
+        console.log(desde);
+        console.log(hasta);
+
+        if($("#expDesde").val() == ""){
+
+          mark($("#expDesde"));
+          mark($("#expHasta"));
+        }else{
+
+          removeMark($("#expDesde"));
+          removeMark($("#expHasta"));
+/*
+          db.find(
+                  {
+                    "query": {
+                      "$and": [
+                        {"TS": {"$gt": desde}},
+
+                        {"TS": {"$lt": hasta}}
+                      ]
+                    }
+                  }, function (err, docs) {
+
+                    if (err){ console.log("Se produjo un error en la búsqueda");}
+                    console.dir(docs);
+                  }
+          );*/
+
+          db.find( { TS: { $gt: desde, $lt: hasta }  },
+          function(err,docs){
+
+            if (err){ console.log("Se produjo un error en la búsqueda");}
+            console.dir(docs);
+
+          }
+          );
+
+        }
+
 
       });
 

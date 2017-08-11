@@ -1,7 +1,7 @@
 {
-  "name": "electron-quick-start",
+  "name": "proturDApp",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Herramienta de carga para PROTUR",
   "main": "main.js",
   "scripts": {
     "start": "electron ."

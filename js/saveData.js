@@ -80,13 +80,13 @@ function save(){
         objectResult.TA = 1;
     }
 
-
+    //inserta en la base de datos
     db.insert(objectResult, function (err, newDoc) {   // Callback is optional
         // newDoc is the newly inserted document, including its _id
         // newDoc has no key called notToBeSaved since its value was undefined
 
         if(err) {
-            alert(err + "\nPor favor, notifique a informática éste error, tel: 4305619","ERROR");
+            alert(err + "\n\nPor favor, notifique a informática éste error, tel: 4305619","ERROR");
         }else{
 
             $("#avisoLabel").text("Completado");
@@ -105,7 +105,25 @@ function save(){
                     $("#aviso").modal("hide");
                 }, 2000);
 
+            //reestablece los campos (solo los necesarios)
+            $("#inpPNombre").val("");
+            $("#selPSexo").val(1);
+            $("#datePNacimiento").val("");
+            $("#Edad").val("");
+            $("#inpPDNI").val("");
+            $("#selPO").val(0);
+            $("#select2OS").val('0').trigger('change.select2');
+            $("#inpPTel").val("");
+            $("#select2Departamento").val('0').trigger('change.select2');
+            $("#inpPDom").val("");
+            $("#select2Especialidad").val('1').trigger('change.select2');
+            $("#optDerivado").prop("checked", true).change();
+            $("#selAtendido").val(0).change();
+            $("#selProgramado").val(1).change();
+            $("#dateTurno").val("");
+
         }
+
 
     });
 }
