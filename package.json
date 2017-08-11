@@ -12,6 +12,7 @@
     "electron": "~1.6.2"
   },
   "dependencies": {
+    "async": "^2.5.0",
     "bootstrap": "^3.3.7",
     "dialog": "^0.3.0",
     "fs": "0.0.1-security",

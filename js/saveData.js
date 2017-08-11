@@ -85,9 +85,27 @@ function save(){
         // newDoc is the newly inserted document, including its _id
         // newDoc has no key called notToBeSaved since its value was undefined
 
-        if(err) alert(err + "\nPor favor, notifique a informática éste error, tel: 4305619","ERROR");
-        console.dir(objectResult)
-        console.log(err)
-        console.log(newDoc)
+        if(err) {
+            alert(err + "\nPor favor, notifique a informática éste error, tel: 4305619","ERROR");
+        }else{
+
+            $("#avisoLabel").text("Completado");
+
+
+
+                $("#text").html("<p>Los datos se guardaron correctamente</p>");
+
+            //https://stackoverflow.com/questions/25577491/how-to-automatically-close-bootstrap-3-modal-after-time-period
+            // Select the element you want to click and add a click event
+                // show the element you want to show
+                $("#aviso").modal("show");
+
+                // Set a timeout to hide the element again
+                setTimeout(function(){
+                    $("#aviso").modal("hide");
+                }, 2000);
+
+        }
+
     });
 }

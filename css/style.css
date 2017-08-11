@@ -399,3 +399,13 @@ li.select2-results__option--highlighted {
 
     border: solid 3px #f00;
 }
+
+#ayudaText p{
+
+    color: #aaa !important;
+}
+
+#ayudaText p b{
+
+    color: #fff !important;
+}
