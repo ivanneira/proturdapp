@@ -1367,25 +1367,7 @@
     // Type 3: Persistent datastore with automatic loading
     var Datastore = require('nedb')
             , db = new Datastore({ filename: 'DATA', autoload: true });
-/*
-    var doc = { hello: 'world'
-      , n: 5
-      , today: new Date()
-      , nedbIsAwesome: true
-      , notthere: null
-      , notToBeSaved: undefined  // Will not be saved
-      , fruits: [ 'apple', 'orange', 'pear' ]
-      , infos: { name: 'nedb' }
-    };
 
-    db.insert(doc, function (err, newDoc) {   // Callback is optional
-      // newDoc is the newly inserted document, including its _id
-      // newDoc has no key called notToBeSaved since its value was undefined
-
-      console.log(err)
-      console.log(newDoc)
-    });
-*/
   </script>
 
   <!--scripts de vista-->
@@ -1518,30 +1500,12 @@
       $("#guardar").click(function(){
 
         if(verificar()){
-          save();
+          //save();
         }
 
-        /*
-        if(verificar()){
-
-          var obj = [{'test': 'test'}];
-          jsonfile.writeFileSync(file, obj, {flag: 'a',spaces: 2}, function (err) {
-
-              if(err!=null){
-                alert("Se ha producido un error: " + err, "ERROR");
-              }else{
-                alert("Datos guardados correctamente", "Completado");
-              }
-          });
-          //reestablece los campos
-          removeSavedData();
-        }
-
-        fs.appendFile("data.json", ',\n{ "chota": 1, "pito": 2 }', function(err){
-          console.log(err)
-        });*/
-
-
+        db.find({ "TS": { "$gt": "1502413501794" } }, function (err, docs) {
+          console.dir(docs);
+        });
       });
 
       $("#ayuda").click(function(){

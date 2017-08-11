@@ -50,7 +50,7 @@ function save(){
 
     //si es derivado
     if(objectResult.TT == 1){
-        objectResult.CT = $("#select2CAPS");
+        objectResult.CT = $("#select2CAPS").val();
     //si es interconsulta
     }else if(objectResult.TT == 2){
         objectResult.EI = $("#select2EspTur").val();
