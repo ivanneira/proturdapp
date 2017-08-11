@@ -1503,10 +1503,10 @@
           //save();
         }
 
-        db.find({ "TS": { "$gt": "1502413501794" } }, function (err, docs) {
-          console.dir(docs);
+        db.find({ "TS": { "$lt": 1502418082897 } }, function (err, docs) {
+            console.dir(docs);
+          });
         });
-      });
 
       $("#ayuda").click(function(){
 

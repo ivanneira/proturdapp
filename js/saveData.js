@@ -8,7 +8,8 @@ function save(){
 //datos del centro de salud
 
     //timestamp
-    objectResult.TS = new Date();
+    var timeStamp = new Date();
+    objectResult.TS = timeStamp.getTime();
     //centro de salud que carga
     objectResult.CS = $("#selCS").val();
     //protur que carga
