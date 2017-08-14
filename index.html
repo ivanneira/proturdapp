@@ -91,7 +91,7 @@
 
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
-              <label for="selCS">Centro de salud que carga:</label></br>
+              <label for="selCS">Centro de salud que carga:</label><br/>
               <select id="selCS" class="select2input" tabindex="1">
 
                 <option value="1">HTAL. DR. GUILLERMO RAWSON</option>
@@ -267,7 +267,7 @@
                 <option value="171">SAR-POSTA Cañada Honda</option>
                 <option value="172">SAR-POSTA Huanacache</option>
                 <option value="173">SAR-CAPS Río Blanco</option>
-                <option value="174">Otros</option>
+                <option value="174">Otro</option>
 
 
               </select>
@@ -546,7 +546,7 @@
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 
-              <label for="select2OS">Obra social:</label></br>
+              <label for="select2OS">Obra social:</label><br/>
               <select id="select2OS" class="select2input"  tabindex="10">
                 <option value="0">No</option>
                 <option value="1">OBRA SOCIAL DEL PERSONAL DE LA INDUSTRIA GRAFICA DE LA PROVINCIA DE CORDOBA</option>
@@ -914,7 +914,7 @@
 
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
               <label for="inpPTel">Teléfono:</label>
-              <input id="inpPTel" type="number" class="form-control"  tabindex="11">
+              <input id="inpPTel" type="number"  class="form-control"  tabindex="11">
             </div>
 
           </div>
@@ -923,7 +923,7 @@
 
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 
-              <label for="select2Departamento">Departamento:</label></br>
+              <label for="select2Departamento">Departamento:</label><br/>
               <select id="select2Departamento" class="select2input" tabindex="12">
                 <option value="0">Otro</option>
                 <option value="1">25 de Mayo</option>
@@ -1384,12 +1384,20 @@
   <script>
     // You can also require other files to run in this process
     require('./renderer.js');
+    //var remote = require('remote');
+    var fs = require('fs');
+    var async = require('async');
+    //http://ourcodeworld.com/articles/read/106/how-to-choose-read-save-delete-or-create-a-file-with-electron-framework
+    //var dialog = app.dialog;
 
     //var fs = require('fs');
 
     // Type 3: Persistent datastore with automatic loading
     var Datastore = require('nedb')
             , db = new Datastore({ filename: 'DATA', autoload: true });
+
+    //diálogos
+    const {dialog} = require('electron').remote
 
   </script>
 
@@ -1552,13 +1560,14 @@
         var desde = $("#expDesde").data("datepicker").viewDate.getTime();
         var hasta = $("#expHasta").data("datepicker").viewDate.getTime();
 
-        console.log(desde);
-        console.log(hasta);
+        //console.log(desde);
+        //console.log(hasta);
 
-        if($("#expDesde").val() == ""){
+        if(($("#expDesde").val() == "")||($("#expHasta").val()== "")){
 
           mark($("#expDesde"));
           mark($("#expHasta"));
+          alert("Elija ambas fechas y la primer fecha debe ser antes que la segunda ","Error en la fecha")
         }else{
 
           removeMark($("#expDesde"));
@@ -1583,16 +1592,71 @@
           db.find( { TS: { $gt: desde, $lt: hasta }  },
           function(err,docs){
 
-            if (err){ console.log("Se produjo un error en la búsqueda");}
-            console.dir(docs);
+            if (err){
+              alert("Se produjo un error en la búsqueda");
+            }else{
 
-          }
-          );
+              var content = docs;
+
+              saveToDisk(content);
+
+            }
+            //console.dir(docs);
+          });
 
         }
 
 
       });
+
+
+      function saveToDisk(content){
+
+        var savePath;
+
+        async.series([
+                function(callback){
+                  savePath = dialog.showOpenDialog({
+                    properties: ['openDirectory'],
+                    title: "SELECCIONE CARPETA PARA GUARDAR EL ARCHIVO EXPORTADO",
+                    buttonLabel: "Exportar Archivo"
+                  });
+
+
+                  callback();
+                },
+                function(callback){
+
+                  if(savePath){
+                    var filename = "DATOS_PROTUR_" + new Date().toDateString().replace(/ /g, function(){return "_";}) + "_" + new Date().getTime()+ ".json";
+
+                    var jsonfile = require('jsonfile');
+
+                    var file = savePath + "\\" + filename;
+
+                    console.log(file);
+
+                    jsonfile.writeFile(file, content, function (err) {
+                      if(err){ alert(err,"ERROR")}else{
+                        alert("Los Datos se guardaron correctamente","");
+                        $("#myModal").modal('hide');
+                      }
+
+                    });
+
+                  }else{
+
+                    alert("Hubo un error al guardar el archivo, intente nuevamente", "ERROR");
+                  }
+
+
+
+                  callback();
+                }
+        ]);
+
+
+      }
 
     });
 
