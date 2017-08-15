@@ -50,6 +50,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-secondary" id="enviarInternet" data-dismiss="modal">Enviar por internet</button>
           <button type="button" class="btn btn-primary" id="exportarDatos">Exportar datos</button>
         </div>
       </div>
@@ -1555,6 +1556,17 @@
 
       });
 
+      var internet = false;
+
+      //enviar por internet
+      $("#enviarInternet").click(function(){
+
+        internet = true;
+
+        $("#exportarDatos").click();
+      });
+
+
       //evento en el botón exportar
       $("#exportarDatos").click(function(){
 
@@ -1568,7 +1580,8 @@
 
           mark($("#expDesde"));
           mark($("#expHasta"));
-          alert("Elija ambas fechas y la primer fecha debe ser antes que la segunda ","Error en la fecha")
+          alert("Elija ambas fechas y la primer fecha debe ser anterior a la segunda ","Error en la fecha");
+          event.stopPropagation();
         }else{
 
           removeMark($("#expDesde"));
@@ -1588,7 +1601,13 @@
               if(content == ""){
                 alert("No se encontraron resultados entre las fechas seleccionadas","SIN RESULTADOS")
               }else{
-                saveToDisk(content);
+
+                if(internet) {
+                  internet = false;
+                  saveToInternet(content);
+                }else{
+                  saveToDisk(content);
+                }
               }
 
             }
@@ -1598,6 +1617,10 @@
         }
 
       });
+
+      function saveToInternet(data){
+        console.log("se manda a internet");
+      }
 
       //graba el archivo en el disco con un timestamp único, solo se selecciona el directorio
       function saveToDisk(content){

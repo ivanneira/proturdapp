@@ -34,7 +34,9 @@ function save(){
     //obra social del paciente
     objectResult.OS = $("#select2OS").val();
     //teléfono del paciente
-    objectResult.TP = $("#inpPTel").val();
+    if($("#inpPTel").val() !== "") {
+        objectResult.TP = $("#inpPTel").val()
+    }
     //Departamento del paciente
     objectResult.PD = $("#select2Departamento").val();
     //domicilio del paciente
@@ -71,7 +73,7 @@ function save(){
         //en caso de turno programado
         if(objectResult.PE ==1 ){
             objectResult.PC = $("#select2CAPSProg").val();
-            console.log(objectResult.PC)
+            //console.log(objectResult.PC)
             objectResult.FP = $("#dateTurno").data('datepicker').getDate();
         }else {
             //en caso de turno no programado
