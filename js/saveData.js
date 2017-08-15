@@ -7,7 +7,7 @@ function save(){
 
 //datos del centro de salud
 
-    //timestamp
+
     var timeStamp = new Date();
     objectResult.TS = timeStamp.getTime();
     //centro de salud que carga
@@ -71,6 +71,7 @@ function save(){
         //en caso de turno programado
         if(objectResult.PE ==1 ){
             objectResult.PC = $("#select2CAPSProg").val();
+            console.log(objectResult.PC)
             objectResult.FP = $("#dateTurno").data('datepicker').getDate();
         }else {
             //en caso de turno no programado
